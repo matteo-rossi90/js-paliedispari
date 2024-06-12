@@ -6,19 +6,19 @@ Dichiariamo chi ha vinto*/
 ///////////////////////////////////////////////////////////////////////
 
 //chiedere all'utente pari o dispari
-let askUser = prompt('Pari o dispari?');
+const askUser = prompt('Pari o dispari?');
 console.log("La scelta dell'utente è: ", askUser);
 
 //chiedere all'utente di inserire un numero da 1 a 5
-let numUser = parseInt(prompt('Inserisci un numero da 1 a 5'));
+const numUser = parseInt(prompt('Inserisci un numero da 1 a 5'));
 console.log("Numero utente: ", numUser);
 
 //fare in modo che il computer generi un numero compreso tra 1 e 5
-let numPC = randomPC(1, 5);
+const numPC = randomPC(1, 5);
 console.log("Numero PC: ",numPC);
 
 // stabilire, in base al numero ottenuto dalla somma, chi è il vincitore
-let result = sumNumber(numUser, numPC);
+let result = oddEvenNumber(numUser, numPC);
 console.log("Somma dei due numeri: ", result);
 
 //confrontare la somma con la dichiarazione dell'utente
@@ -38,25 +38,18 @@ if (result === 'pari' && askUser === 'pari') {// se la somma dà un numero pari 
 //generare un numero random da 1 a 5 per il computer
 function randomPC(min, max){
 
-    let num = Math.floor(Math.random() * (max - min) + min);
-
-    return num;
+    return Math.floor(Math.random() * (max - min) + min);
 
 }
 
 //capire se la somma dei due numeri darà un numero pari o un numero dispari
-function sumNumber(num1, num2){
+function oddEvenNumber(num1, num2){
 
     //sommare i due valori
     let sum = num1 + num2;
 
     //stabilire se la somma restituisce un numero pari o dispari
-    if (sum % 2 === 0){
-        sum = 'pari';
-    }else{
-        sum = 'dispari';
-    }
 
-    return sum;
+    return sum % 2 === 0 ? "pari" : "dispari";
 }
 

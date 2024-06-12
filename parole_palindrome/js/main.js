@@ -11,7 +11,8 @@ let palindromeWord = checkWord(askWord);
 console.log(palindromeWord);
 
 //stabilire se la parola immessa è palindroma o no e inserire il messaggio in DOM
-if (palindromeWord == true) {
+if (palindromeWord === true) {
+    
     console.log("La parola è palindroma");
 }
 else {
