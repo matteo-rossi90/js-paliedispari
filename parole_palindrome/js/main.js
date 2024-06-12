@@ -10,6 +10,15 @@ console.log(askWord);
 let palindromeWord = checkWord(askWord);
 console.log(palindromeWord);
 
+//stabilire se la parola immessa è palindroma o no e inserire il messaggio in DOM
+if (palindromeWord == true) {
+    console.log("La parola è palindroma");
+}
+else {
+    console.log("La parola non è palindroma");
+}
+
+//FUNZIONE//
 //capire se quella parola è palindroma 
 //(ossia si legge ugualmente da sinistra verso destra o viceversa)
 
