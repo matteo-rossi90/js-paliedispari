@@ -48,7 +48,7 @@ addButton.addEventListener('click',
         } else if (result === 'dispari' && askUser === 'dispari') {// se la somma dà un numero dispari e corrisponde alla dichiarazione dell'utente
             message = 'Hai vinto!';
         } else {
-            message = 'Non hai selezionato bene il numero. Riprova.';
+            message = 'Hai perso! Vergognati...';
         }
 
         //aggiungere una classe all'intestazione del messaggio
