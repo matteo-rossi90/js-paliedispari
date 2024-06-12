@@ -44,11 +44,11 @@ addButton.addEventListener('click',
         if (result === 'pari' && askUser === 'pari') {// se la somma dà un numero pari e corrisponde alla dichiarazione dell'utente
             message = 'Hai vinto!';
         } else if (result === 'pari' && askUser === 'dispari') {// se la somma dà un numero pari e non corrisponde alla dichiarazione dell'utente
-            message = 'Hai perso!';
+            message = 'Hai perso! Vergognati...';
         } else if (result === 'dispari' && askUser === 'dispari') {// se la somma dà un numero dispari e corrisponde alla dichiarazione dell'utente
             message = 'Hai vinto!';
         } else {
-            message = 'Hai perso! Vergognati...';
+            message = 'Non hai selezionato bene il numero. Riprova.';
         }
 
         //aggiungere una classe all'intestazione del messaggio
