@@ -6,16 +6,30 @@ Dichiariamo chi ha vinto*/
 ///////////////////////////////////////////////////////////////////////
 
 //chiedere all'utente pari o dispari
-let askUser = prompt('Pari o dispari');
-console.log(askUser);
+let askUser = prompt('Pari o dispari?');
+console.log("La scelta dell'utente è: ", askUser);
 
 //chiedere all'utente di inserire un numero da 1 a 5
 let numUser = parseInt(prompt('Inserisci un numero da 1 a 5'));
-console.log(numUser);
+console.log("Numero utente: ", numUser);
 
 //fare in modo che il computer generi un numero compreso tra 1 e 5
 let numPC = randomPC(1, 5);
-console.log(numPC);
+console.log("Numero PC: ",numPC);
+
+// stabilire, in base al numero ottenuto dalla somma, chi è il vincitore
+let result = sumNumber(numUser, numPC);
+console.log("Somma dei due numeri: ", result);
+
+if (result === 'pari' && askUser === 'pari') {// se la somma dà un numero pari e corrisponde alla dichiarazione dell'utente
+    alert('Hai vinto');
+} else if (result === 'pari' && askUser === 'dispari') {// se la somma dà un numero pari e non corrisponde alla dichiarazione dell'utente
+    alert('Hai perso');
+} else if (result === 'dispari' && askUser === 'dispari') {// se la somma dà un numero dispari e corrisponde alla dichiarazione dell'utente
+    alert('Hai vinto');
+} else {
+    alert('Hai perso');
+}
 
 
 //FUNZIONI//
@@ -35,6 +49,7 @@ function sumNumber(numUser, numPC){
     //sommare i due valori
     let sum = numUser + numPC;
 
+    //stabilire se la somma restituisce un numero pari o dispari
     if ((numUser && numPC) % 2 === 0){
         sum = 'pari';
     }else{
