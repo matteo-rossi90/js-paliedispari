@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pari e dispari</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <div id="box-container">
+
+            <h1>Pari o dispari?</h1>
+
+            <p id="text-paragraph">Scegli tra "pari" e "dispari" e scegli un numero tra 1 e 5. 
+                Il sistema sommerà il tuo valore con quello del tuo PC e la somma ottenuta
+                restituirà un numero che sarà pari o dispari. Se il numero
+                corrisponde alla tua scelta, hai vinto!
+            </p>
+            <form action="#">
+
+                <!-- scegli tra pari e dispari -->
+                <select type="select" id="input-word">
+                    <option value="pari">pari</option>
+                    <option value="dispari">dispari</option>
+                </select>
+
+                <!-- immetti un numero da 1 a 5 -->
+                <input type="number" id="input-num" placeholder="Scegli un numero da 1 a 5" min="1" max="5">
+                <button class="send">Verifica</button>
+            </form>
+
+            <!-- messaggio -->
+            <h2 id="messaggio"></h2>
+
+        </div>
+
+    </div>
+
+    <!-- codice js -->
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
