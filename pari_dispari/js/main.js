@@ -21,16 +21,22 @@ console.log("Numero PC: ",numPC);
 let result = oddEvenNumber(numUser, numPC);
 console.log("Somma dei due numeri: ", result);
 
+//dichiarare la variabile che contiene il messaggio da comunicare
+let message;
+
 //confrontare la somma con la dichiarazione dell'utente
 if (result === 'pari' && askUser === 'pari') {// se la somma dà un numero pari e corrisponde alla dichiarazione dell'utente
-    alert('Hai vinto');
+    message = 'Hai vinto';
 } else if (result === 'pari' && askUser === 'dispari') {// se la somma dà un numero pari e non corrisponde alla dichiarazione dell'utente
-    alert('Hai perso');
+    message = 'Hai perso';
 } else if (result === 'dispari' && askUser === 'dispari') {// se la somma dà un numero dispari e corrisponde alla dichiarazione dell'utente
-    alert('Hai vinto');
+    message = 'Hai vinto';
 } else {
-    alert('Hai perso');
+    message = 'Hai perso';
 }
+
+let content = document.getElementById("messaggio");
+content.innerHTML = message;
 
 
 //FUNZIONI//
@@ -38,7 +44,7 @@ if (result === 'pari' && askUser === 'pari') {// se la somma dà un numero pari 
 //generare un numero random da 1 a 5 per il computer
 function randomPC(min, max){
 
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min + 1) + min);
 
 }
 

@@ -10,14 +10,20 @@ console.log(askWord);
 let palindromeWord = checkWord(askWord);
 console.log(palindromeWord);
 
+//dichiarare la variabile che conterrà il messaggio e il suo inserimento in base all'id
+let message;
+const content = document.getElementById("text");
+
 //stabilire se la parola immessa è palindroma o no e inserire il messaggio in DOM
 if (palindromeWord === true) {
-    
-    console.log("La parola è palindroma");
+    message = "La parola è palindroma";
 }
 else {
-    console.log("La parola non è palindroma");
+    message = "La parola non è palindroma";
 }
+
+//stampare il messaggio in DOM
+content.innerHTML = message;
 
 //FUNZIONE//
 //capire se quella parola è palindroma 
