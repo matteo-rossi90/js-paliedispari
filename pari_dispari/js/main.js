@@ -21,6 +21,7 @@ console.log("Numero PC: ",numPC);
 let result = sumNumber(numUser, numPC);
 console.log("Somma dei due numeri: ", result);
 
+//confrontare la somma con la dichiarazione dell'utente
 if (result === 'pari' && askUser === 'pari') {// se la somma dà un numero pari e corrisponde alla dichiarazione dell'utente
     alert('Hai vinto');
 } else if (result === 'pari' && askUser === 'dispari') {// se la somma dà un numero pari e non corrisponde alla dichiarazione dell'utente
@@ -44,13 +45,13 @@ function randomPC(min, max){
 }
 
 //capire se la somma dei due numeri darà un numero pari o un numero dispari
-function sumNumber(numUser, numPC){
+function sumNumber(num1, num2){
 
     //sommare i due valori
-    let sum = numUser + numPC;
+    let sum = num1 + num2;
 
     //stabilire se la somma restituisce un numero pari o dispari
-    if ((numUser && numPC) % 2 === 0){
+    if (sum % 2 === 0){
         sum = 'pari';
     }else{
         sum = 'dispari';
