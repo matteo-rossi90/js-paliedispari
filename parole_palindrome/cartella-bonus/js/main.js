@@ -3,7 +3,7 @@ Creare una funzione per capire se la parola inserita è palindroma*/
 
 //////////////////////////////////////////////////////////////////
 
-//selezionare il form
+//selezionare l'input che raccoglierà la parola
 let inputName = document.querySelector("#input-text");
 
 //selezionare il pulsante
@@ -12,7 +12,7 @@ let addButton = document.querySelector(".send");
 addButton.addEventListener('click', 
     function (){
 
-        //chiedere all'utente di inserire una parola
+        //salvare la parola inserita dall'utente
         let askWord = inputName.value;
         console.log(askWord);
 
@@ -24,7 +24,7 @@ addButton.addEventListener('click',
         const content = document.getElementById("text");
 
         //stabilire se la parola immessa è palindroma o no e inserire il messaggio in DOM
-        if (palindromeWord === true) {
+        if (palindromeWord) {
             message = "La parola è palindroma";
         }else{
             message = "La parola non è palindroma";

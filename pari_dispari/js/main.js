@@ -25,15 +25,18 @@ console.log("Somma dei due numeri: ", result);
 let message;
 
 //confrontare la somma con la dichiarazione dell'utente
-if (result === 'pari' && askUser === 'pari') {// se la somma dà un numero pari e corrisponde alla dichiarazione dell'utente
-    message = 'Hai vinto';
-} else if (result === 'pari' && askUser === 'dispari') {// se la somma dà un numero pari e non corrisponde alla dichiarazione dell'utente
-    message = 'Hai perso';
-} else if (result === 'dispari' && askUser === 'dispari') {// se la somma dà un numero dispari e corrisponde alla dichiarazione dell'utente
-    message = 'Hai vinto';
+if (result === askUser) {// se la somma corrisponde alla dichiarazione dell'utente
+    message = 'Hai vinto!';
 } else {
-    message = 'Hai perso';
+    message = 'Hai perso!';
 }
+
+
+
+
+
+
+
 
 let content = document.getElementById("messaggio");
 content.innerHTML = message;

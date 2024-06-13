@@ -5,10 +5,10 @@ Dichiariamo chi ha vinto*/
 
 ///////////////////////////////////////////////////////////////////////
 
-//selezionare il form per raccogliere la scelta "Pari o Dispari?"
+//selezionare l'input per la scelta "Pari o Dispari?"
 let inputChoice = document.querySelector("#input-word");
 
-//selezionare il form per raccogliere un numero immesso dall'utente
+//selezionare l'input per il numero immesso dall'utente
 let inputNum = document.querySelector("#input-num");
 
 //selezionare il pulsante
@@ -18,16 +18,16 @@ const addButton = document.querySelector('.send');
 addButton.addEventListener('click',
     function(){
 
-        //chiedere all'utente pari o dispari
+        //salvare la dischiarazione "pari" o "dispari" scelta dall'utente
         let askUser = inputChoice.value;
         console.log("La scelta dell'utente è: ", askUser);
 
-        //chiedere all'utente di inserire un numero da 1 a 5
+        //salvare il numero inserito dall'utente
         const numUser = parseInt(inputNum.value);
         console.log("Numero utente: ", numUser);
 
         //fare in modo che il computer generi un numero compreso tra 1 e 5
-        const numPC = randomPC(1, 5);
+        const numPC = randomNum(1, 5);
         console.log("Numero PC: ", numPC);
 
         // stabilire, in base al numero ottenuto dalla somma, chi è il vincitore
@@ -41,14 +41,10 @@ addButton.addEventListener('click',
         let content = document.getElementById("messaggio");
 
         //confrontare la somma con la dichiarazione dell'utente
-        if (result === 'pari' && askUser === 'pari') {// se la somma dà un numero pari e corrisponde alla dichiarazione dell'utente
-            message = 'Hai vinto!';
-        } else if (result === 'pari' && askUser === 'dispari') {// se la somma dà un numero pari e non corrisponde alla dichiarazione dell'utente
-            message = 'Hai perso! Vergognati...';
-        } else if (result === 'dispari' && askUser === 'dispari') {// se la somma dà un numero dispari e corrisponde alla dichiarazione dell'utente
+        if (result === askUser) {// se la somma corrisponde alla dichiarazione dell'utente
             message = 'Hai vinto!';
         } else {
-            message = 'Hai perso! Vergognati...';
+            message = 'Hai perso!';
         }
 
         // definire un'opacità inziale all'intestazione del messaggio
@@ -69,8 +65,8 @@ addButton.addEventListener('click',
 
 //FUNZIONI//
 
-//generare un numero random da 1 a 5 per il computer
-function randomPC(min, max){
+//generare un numero random da 1 a 5
+function randomNum(min, max){
 
     return Math.floor(Math.random() * (max - min + 1) + min);
 
