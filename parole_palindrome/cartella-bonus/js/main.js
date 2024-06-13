@@ -31,9 +31,8 @@ addButton.addEventListener('click',
 
         }
 
-        //aggiungere una classe all'intestazione del messaggio
+        //definire un'opacità inziale all'intestazione del messaggio
     
-        content.classList.add('item-style');
         content.style.opacity = 0;
 
         setTimeout(() => {

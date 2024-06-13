@@ -51,8 +51,7 @@ addButton.addEventListener('click',
             message = 'Hai perso! Vergognati...';
         }
 
-        //aggiungere una classe all'intestazione del messaggio
-        content.classList.add('item-style');
+        // definire un'opacità inziale all'intestazione del messaggio
         content.style.opacity = 0;
         
         //impostare un timing per l'effetto graduale
